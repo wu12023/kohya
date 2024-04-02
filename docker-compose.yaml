@@ -4,7 +4,7 @@ services:
   kohya-ss-gui:
     container_name: kohya-ss-gui
     image: kohya-ss-gui:latest
-    user: 1000:0
+    user: "0:0"
     build:
       context: .
       args:
@@ -21,6 +21,7 @@ services:
       - ./dataset:/dataset
       - ./dataset/images:/app/data
       - ./dataset/logs:/app/logs
+      - /root/shiym_proj/diffusers/examples/dreambooth/stable-diffusion-xl-base-1.0:/app/models//stable-diffusion-xl-base-1.0
       - ./dataset/outputs:/app/outputs
       - ./dataset/regularization:/app/regularization
       - ./.cache/config:/app/config

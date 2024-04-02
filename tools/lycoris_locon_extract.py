@@ -36,7 +36,7 @@ def get_args():
     parser.add_argument(
         "--device",
         help="Which device you want to use to extract the locon",
-        default="cpu",
+        default="cuda",
         type=str,
     )
     parser.add_argument(

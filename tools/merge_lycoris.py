@@ -33,7 +33,7 @@ def get_args():
     parser.add_argument(
         "--device",
         help="Which device you want to use to merge the weight",
-        default="cpu",
+        default="cuda",
         type=str,
     )
     parser.add_argument("--dtype", help="dtype to save", default="float", type=str)

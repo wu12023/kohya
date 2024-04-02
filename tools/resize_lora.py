@@ -326,7 +326,7 @@ if __name__ == '__main__':
                       help="destination file name: ckpt or safetensors file / 保存先のファイル名、ckptまたはsafetensors")
   parser.add_argument("--model", type=str, default=None,
                       help="LoRA model to resize at to new rank: ckpt or safetensors file / 読み込むLoRAモデル、ckptまたはsafetensors")
-  parser.add_argument("--device", type=str, default=None, help="device to use, cuda for GPU / 計算を行うデバイス、cuda でGPUを使う")
+  parser.add_argument("--device", type=str, default='cuda', help="device to use, cuda for GPU / 計算を行うデバイス、cuda でGPUを使う")
   parser.add_argument("--verbose", action="store_true", 
                       help="Display verbose resizing information / rank変更時の詳細情報を出力する")
   parser.add_argument("--dynamic_method", type=str, default=None, choices=[None, "sv_ratio", "sv_fro", "sv_cumulative"],
